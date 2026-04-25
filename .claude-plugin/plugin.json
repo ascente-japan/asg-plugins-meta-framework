@@ -1,8 +1,5 @@
 {
   "name": "asg-meta-framework",
-  "version": "0.1.0",
   "description": "ASG共通行動原則 skill 集（self-restraint / coding-discipline / handoff-format）",
-  "author": {"name": "Ascente Japan (ASG)"},
-  "skills": ["self-restraint", "coding-discipline", "handoff-format"],
-  "license": "Proprietary"
+  "author": {"name": "Ascente Japan (ASG)"}
 }

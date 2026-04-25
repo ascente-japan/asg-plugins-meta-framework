@@ -42,10 +42,16 @@ version: 0.1.0
 
 ```bash
 # Cowork宛 handoff（Google Docs送信）
-uv run python -X utf8 send_handoff_doc.py "<タイトル>" <mdファイルパス>
+uv run python -X utf8 send_handoff_doc.py --title "<タイトル>" --body-file <mdファイルパス> --target Cowork
 ```
 
 または `/send-handoff` スキルを使う。
+
+## handoff命名（自動化）
+
+- `send_handoff_doc.py` が自動で命名統一を行う
+- 手動命名禁止（必ずスクリプト経由で送出）
+- 命名形式: `YYYYMMDD_<target>宛_<sanitized_件名>`（括弧除去・スペース→アンダースコア）
 
 ## ルール
 

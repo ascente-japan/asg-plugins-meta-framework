@@ -1,0 +1,65 @@
+# ASG 標準 .gitignore セット v1（2026-04-27）
+# 出典: scripts/.gitignore（Cowork security sweep 2026-04-15基準）
+# 配布先: 全ASG repo（agent / plugin / marketplace / scripts）
+
+# ===== 認証情報（絶対push禁止）=====
+.env
+env/
+credentials.json
+client_secret*.json
+token.json
+*.pem
+*secret*
+*credential*
+*.bak
+.env.bak*
+
+# ===== Python =====
+__pycache__/
+*.pyc
+*.pyo
+build/
+dist/
+wheels/
+*.egg-info
+
+# ===== uv / venv =====
+.venv/
+
+# ===== OS / IDE =====
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ===== Claude Code ローカル設定 =====
+.claude/settings.local.json
+.claude/launch.json
+.claude/worktrees/
+
+# ===== Google Drive リンクファイル =====
+*.gdoc
+*.gsheet
+*.gslides
+
+# ===== Handoff（URL・内部情報を含むため）=====
+handoff/
+handoff_tmp/
+handoff_drafts/
+
+# ===== ログ =====
+logs/
+*.log
+
+# ===== Temp / Debug =====
+tmp_*.json
+tmp_*.csv
+*_scroll*.png
+*_pagescroll*.png
+budget_*.png
+
+# ===== Playwright CLI artifacts =====
+.playwright-cli/
+.playwright-mcp/
+page-*.yml
+console-*.log
